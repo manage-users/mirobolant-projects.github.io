@@ -1,0 +1,184 @@
+body {
+	background: url(bg-google.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container-form{
+	width: 370px;
+	height: 420px;
+	background: white;
+	margin: 0px auto;
+	margin-top: 60px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px, rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	padding: 40px;
+}
+
+	.div-title{
+		font-size: 24px;
+		font-family: sans-serif;
+		line-height: 20px;
+	}
+
+		.div-title span{
+			font-size: 14px;
+		}
+
+form{
+	font-family: calibri;
+}
+
+	form label{
+		font-size: 12px;
+		font-weight: 700;
+		color: rgba(0,0,0,0.5);
+	}
+
+	.form-input-data, #pass2{
+		outline: none;
+		border-style: none;
+		width: 100%;
+		border-bottom: 1px rgba(0,0,0,0.2) solid;
+	}
+
+	#pass2{
+		width: 90%;
+	}
+
+	.div-container-label, .div-container-input{
+		margin-bottom: 30px;
+	}
+
+	.btn-forgot-pwd{
+		border-style: none;
+		background-color: transparent;
+		position: absolute;
+		left: 0px;
+		margin-top: 10px;
+		padding: 10px 5px 10px 5px;
+		color: rgb(30,144,255);
+		border-radius: 3px;
+	}
+
+	.btn-forgot-pwd:active{
+		background: rgba(30,144,255,0.3);
+	}
+
+	.div-submit{
+		position: relative;
+		display: flex;
+	}
+		/*.div-submit input{*/
+		#submitData{
+			position: absolute;
+			right: 0px;
+			margin-top: 10px;
+			border-style: none;
+			padding: 10px 20px;
+			background: rgb(30,144,255);
+			border-radius: 3px;
+			color: white;
+			/*text-decoration: none;*/
+		}
+
+.container-bottom{
+	width: 450px;
+	height: 20px;
+	margin: 0px auto;
+	margin-top: 20px;
+	display: flex;
+}
+
+	.container-bottom-content{
+		width: 50%;
+		height: 100%;
+	}
+
+	.select-language{
+		border-style: none;
+		outline: none;
+		font-family: calibri;
+		font-size: 14px;
+	}
+
+	.added-elts{
+		width: 50%;
+		height: 100%;
+		font-size: 14px;
+		font-family: calibri;
+	}
+
+	.added-elts-content{
+		display: flex;
+		position: relative;
+	}
+
+	.added-elts-item{
+		color: rgba(0,0,0,0.5); position: absolute; float: right;
+		color: rgba(0,0,0,0.5); position: absolute; float: right;
+		color: rgba(0,0,0,0.5); position: absolute; float: right;
+	}
+
+	.added-elts-1{margin-left: 60px;}
+	.added-elts-2{margin-left: 120px;}
+	.added-elts-3{margin-left: 180px;}
+
+
+
+/*TABLETTES*/
+@media screen and (min-width: 769px) and (max-width: 992px){
+	/*body{
+	}*/
+}
+
+
+/*TELEPHONES*/
+@media screen and (max-width: 768px){
+	body{
+		background-color: none;
+	}
+
+	.container-form{
+		width: 100%;
+		height: 500px;
+		background: white;
+		margin: 0px auto;
+		margin-top: 40px;
+		padding: 0px;
+		box-shadow: none;
+	}
+
+
+
+	/*-------------------------------------------------*/
+
+
+	.container-bottom{
+		width: 100%;
+		margin-top: 50px;
+	}
+
+		.container-bottom-content{
+			width: 30%;
+		}
+
+		.select-language{
+			background-color: white;
+			font-size: 12px;
+		}
+
+		.added-elts{
+			width: 70%;
+			font-size: 12px;
+		}
+
+		.added-elts-1{margin-left: 100px;}
+		.added-elts-2{margin-left: 150px;}
+		.added-elts-3{margin-left: 200px;}
+
+	.container-bottom{
+		display: none;
+	}
+}

